@@ -26,10 +26,14 @@
     <%= form.datetime_select :date %>
   </div>
 
-  <div class="field">
+  <%
+=begin%>
+ <div class="field">
     <%= form.label :user_id %>
     <%= form.text_field :user_id %>
-  </div>
+  </div> 
+<%
+=end%>
 
   <div class="actions">
     <%= form.submit %>
