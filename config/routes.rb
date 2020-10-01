@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   post '/users' => 'users#create'
 
   get '/created-events' => 'users#index'
+  get '/events-attended' => 'users#show'
+
+  get '/attendees' => 'events#show'
 
   root "events#index"
 end
+  
