@@ -3,5 +3,6 @@ class Event < ApplicationRecord
     has_many :attendances, foreign_key: :attended_event_id
     has_many :attendees, through: :attendances, source: :attendee, dependent: :delete_all 
 
-    
+    scope :upcoming_events, -> { where("date >= ?", Date.current)}
+    scope :past_events, -> { where("date < ?", Date.current)}
 end

@@ -5,8 +5,8 @@ class EventsController < ApplicationController
   # GET /events.json
   def index
     @events = Event.all
-    @past_events = Event.where("date < ?", Date.current)
-    @upcoming_events = Event.where("date >= ?", Date.current)
+    @past_events = Event.past_events
+    @upcoming_events = Event.upcoming_events
   end
 
   # GET /events/1
@@ -74,5 +74,5 @@ class EventsController < ApplicationController
     def event_params
       params.require(:event).permit(:title, :description, :location, :date)
     end
-      
+
 end

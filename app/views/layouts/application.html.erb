@@ -10,6 +10,11 @@
   <body>
     <% if current_user %>
       Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
+      <br>
+      <br>
+      <%= link_to "My Events", '/created-events' %> | <%= link_to "Events Attended", '/events-attended' %> | <%= link_to "All Events", '/events' %>
+      <br>
+      <br>
     <% else %>
       <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
     <% end %>
