@@ -1,14 +1,16 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Past Events</h1>
+<h1 class="title">Past Events</h1>
 
-<table>
+<table class="table">
   <thead>
     <tr>
       <th>Title</th>
       <th>Description</th>
       <th>Location</th>
       <th>Date</th>
+            <th>Present</th>
+
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,6 +22,11 @@
         <td><%= event.description %></td>
         <td><%= event.location %></td>
         <td><%= event.date %></td>
+        <%
+=begin%>
+ <td><%= link_to 'Attend Event',  -%></td> 
+<%
+=end%>
         <td><%= link_to 'Show', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -29,16 +36,16 @@
 </table>
 
 <br>
+<h1 class="title">Upcoming Events</h1>
 
-<h1>Upcoming Events</h1>
-
-<table>
+<table class="table">
   <thead>
-    <tr>
+    <tr >
       <th>Title</th>
       <th>Description</th>
       <th>Location</th>
       <th>Date</th>
+      <th>Present</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -57,5 +64,3 @@
     <% end %>
   </tbody>
 </table>
-
-<%= link_to 'New Event', new_event_path %>
