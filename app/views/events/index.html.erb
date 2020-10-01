@@ -22,11 +22,7 @@
         <td><%= event.description %></td>
         <td><%= event.location %></td>
         <td><%= event.date %></td>
-        <%
-=begin%>
- <td><%= link_to 'Attend Event',  -%></td> 
-<%
-=end%>
+        <td><%= link_to 'Attend Event', attendance_path(event.id), method: :post %></td>
         <td><%= link_to 'Show', event %></td>
         <td><%= link_to 'Edit', edit_event_path(event) %></td>
         <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
