@@ -13,8 +13,7 @@ Rails.application.routes.draw do
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
 
-  get '/created-events' => 'users#index'
-  get '/events-attended' => 'users#show'
+  get '/my-events' => 'users#show'
 
   get '/attendees' => 'events#show'
 

@@ -28,7 +28,6 @@
                     <p class="control">
                         <%if current_user%>
                         Logged in as: <%= current_user.name %>
-                        <%= link_to 'New Post', new_event_path, class: "button is-info is-inverted" %>
                         <%end%>
 
                     </p>
@@ -48,7 +47,9 @@
         </div>
     </nav>
     <div class="mx-5 mt-3">
-    <%= yield %>
+        <%= yield %>
+
+       
     </div>
 </body>
 

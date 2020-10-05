@@ -1,5 +1,6 @@
 <p id="notice"><%= notice %></p>
-
+<h1 class="title">All Events</h1>
+<hr>
 
 <h1 class="title">Past Events</h1>
 
@@ -67,3 +68,9 @@
     <% end %>
   </tbody>
 </table>
+
+<% if current_user %>
+<%= link_to 'New Event', new_event_path, class: "button is-info is-inverted" %>
+<%= link_to 'Your Events', '/my-events', class: "button is-info is-inverted" %>
+
+<% end%>

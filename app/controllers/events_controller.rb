@@ -4,14 +4,20 @@ class EventsController < ApplicationController
   # GET /events
   # GET /events.json
   def index
-    @events = Event.all
-    @past_events = Event.past_events
-    @upcoming_events = Event.upcoming_events
+    if current_user.nil?
+      redirect_to '/login'
+    else
+      @events = Event.all
+      @past_events = Event.past_events
+      @upcoming_events = Event.upcoming_events
+    end
   end
 
   # GET /events/1
   # GET /events/1.json
-  def show; end
+  def show
+    redirect_to '/login' if current_user.nil?
+  end
 
   # GET /events/new
   def new

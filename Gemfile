@@ -54,3 +54,6 @@ end
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'bulma-rails', '~> 0.9.0'
+group :development, :test do
+  gem 'rspec-rails', '~> 4.0.1'
+end
