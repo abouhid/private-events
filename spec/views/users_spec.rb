@@ -31,13 +31,19 @@ describe 'the signin process', type: :feature do
     click_button 'Login'
     visit '/events'
     expect(page).to have_content 'Logged in as: Alex'
+    visit '/my-events'
+    
   end
 
-  # it 'Users Index page Show the Events' do
-  #   visit '/my-events'
+   it 'Users Index page Show the Events' do
+    visit '/login'
 
-  #   expect(page).to have_content 'Created Events'
-  #   expect(page).to have_content 'Events Attended'
+    fill_in 'email', with: 'alex@gmail.com'
 
-  # end
+    click_button 'Login'
+    visit '/events'
+    expect(page).to have_content 'Created Events'
+    expect(page).to have_content 'Events Attended'
+   
+   end
 end
