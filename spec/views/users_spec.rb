@@ -32,10 +32,9 @@ describe 'the signin process', type: :feature do
     visit '/events'
     expect(page).to have_content 'Logged in as: Alex'
     visit '/my-events'
-    
   end
 
-   it 'Users Index page Show the Events' do
+  it 'Users Index page Show the Events' do
     visit '/login'
 
     fill_in 'email', with: 'alex@gmail.com'
@@ -44,6 +43,5 @@ describe 'the signin process', type: :feature do
     visit '/events'
     expect(page).to have_content 'Created Events'
     expect(page).to have_content 'Events Attended'
-   
-   end
+  end
 end
