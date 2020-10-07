@@ -46,4 +46,10 @@ RSpec.configure do |config|
     confi.default_driver = :selenium
     # config.always_include_port = true
   end
+  Shoulda::Matchers.configure do |config|
+    config.integrate do |with|
+      with.test_framework :rspec
+      with.library :rails
+    end
+  end
 end

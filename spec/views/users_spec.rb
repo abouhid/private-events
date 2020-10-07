@@ -40,7 +40,7 @@ describe 'the signin process', type: :feature do
     fill_in 'email', with: 'alex@gmail.com'
 
     click_button 'Login'
-    visit '/events'
+    visit '/my-events'
     expect(page).to have_content 'Created Events'
     expect(page).to have_content 'Events Attended'
   end

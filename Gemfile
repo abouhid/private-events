@@ -12,7 +12,7 @@ group :development, :test do
   gem 'faker'
   gem 'rspec-rails', '~> 3.5'
   gem 'selenium-webdriver'
-  gem 'shoulda-matchers', require: false
+  gem 'shoulda-matchers'
   gem 'webdrivers'
 end
 
