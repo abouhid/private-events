@@ -2,6 +2,9 @@
 
 The main objective of this project was to build an events application such as `EventBrite`. This was supposed to demonstrate a mastery in working with `Rails Associations`. Here, a User can be both a creator and attendee of an event and an Event has many attendees. To accomplish this `many-to-many` relationship, we had to create an inner join table called `attendance`.
 
+![screenshot](./Index.png)
+
+
 ## Getting Started
 - Clone the repository using `git clone git@github.com:abouhid/private-events.git`
 - Change directories into the location to which you cloned the repo using `cd`
